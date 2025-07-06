@@ -17,7 +17,7 @@ user_input=st.text_input('Input Features')
 
 if user_input:
     user_input=user_input.split(',')
-    features=np.array([user_input],dtype='float32')
+    features = np.array(user_input, dtype='float32').reshape(1, -1)
     output=rfc.predict(features).reshape(1,-1)
 
 
